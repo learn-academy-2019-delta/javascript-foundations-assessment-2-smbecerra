@@ -1,3 +1,11 @@
+var text = 'outside'
+function logIt(){
+  console.log(text)
+  var text = 'inside'
+}
+logIt()
+
+
 // ASSESSMENT 2: JAVASCRIPT FOUNDATIONS
 // Coding practical questions
 
@@ -36,15 +44,20 @@ console.log(helloMe.getData())
 var randomNouns = ["streetlamp", "potato", "teeth", "conclusion", "nephew", "temperature", "database"]
 
 // 3a. Write a function that returns every other item as one string. Expected output: "streetlamp teeth nephew database"
-let newString = (arr) => {
-    let newArr = []
-    for(let i = 0; i < arr.length; i++){
-        if (i%2 === 0)
-        newArr.push(arr[i])
-    } return newArr.join(" ")
-}
+// let newString = (arr) => {
+//     let newArr = []
+//     for(let i = 0; i < arr.length; i++){
+//         if (i%2 === 0)
+//         newArr.push(arr[i])
+//     } return newArr.join(" ")
+// }
 
-console.log(newString(randomNouns))
+// console.log(newString(randomNouns))
+
+//const fn = (e,i, arr)
+
+let res = randomNouns.filter((_, i) => i%2 === 0)
+console.log(res)
 
 
 
@@ -59,8 +72,16 @@ console.log(makeNumber(randomNouns))
 
 // 3c. Stretch: Create a function called capitalizer that takes in the variable and returns the array with all the words capitalized. Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew", "Temperature", "Database"]
 
+let makeNumberCap = (arr) => {
+    return arr.map(value => value.toUpperCase()).join(", ")
+}
+
+console.log(makeNumberCap(randomNouns))
 
 
+let res2 = randomNouns.map((e) => e.toUpperCase())
+
+console.log(res2.join(", "))
 // -------------------------------------------------
 // Consider the variables:
 var testString1 = "learn"
@@ -69,12 +90,17 @@ var testString3 = "sandiego"
 
 // 4a. Write a function called alphabetSoup that takes one argument and returns a string with all the letters in alphabetical order. Use each of the varibales as test cases. Expected output: "aelnr" "aacdemy" "adeginos"
 
-let alphabetSoup = (arr) => {
-    return arr.split('').sort().join(' ')
-}
-//split sort join
+let collection = ["learn", "academy", "sandiego"]
 
-console.log(alphabetSoup(testString2))
+let result = collection.map(text => text.split('').sort().join(''))
+
+console.log(result)
+// let alphabetSoup = (arr) => {
+//     return arr.split('').sort().join(' ')
+// }
+// //split sort join
+
+// console.log(alphabetSoup(testString2))
 
 // 4b. Write a function that takes in all three variables and returns a string with all the letters in alphabetical order. Expected output: "aaaacddeeegilmnnorsy"
 let allOfTheLetters = (arr, arr2, arr3) => {

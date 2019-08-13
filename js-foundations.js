@@ -17,9 +17,11 @@ logIt()
     //          return num + " is not evenly divisible by three." ;
     //      }
     //  }
+    const itIs = ' is evenly divisible by three.'
+    const itIsNot = ' is not evenly divisble by three.'
      
-    const evenlyByThree = num => (num % 3 === 0) ? num + " is evenly divisible by three." : num + " is not evenly divisible by three.";
-     
+    const evenlyByThree = num => (num % 3 === 0) ? `num + ${itIs}` : `num + ${itIsNot}`;
+ 
      
      console.log(evenlyByThree(385));
 

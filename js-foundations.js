@@ -75,15 +75,15 @@ console.log(makeNumber(randomNouns))
 // 3c. Stretch: Create a function called capitalizer that takes in the variable and returns the array with all the words capitalized. Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew", "Temperature", "Database"]
 
 let makeNumberCap = (arr) => {
-    return arr.map(value => value.toUpperCase()).join(", ")
+    return arr.map(value => value.charAt(0).toUpperCase() + value.slice(1)).join(", ")
 }
 
 console.log(makeNumberCap(randomNouns))
 
 
-let res2 = randomNouns.map((e) => e.toUpperCase())
+// let res2 = randomNouns.map((e) => e.toUpperCase())
 
-console.log(res2.join(", "))
+// console.log(res2.join(", "))
 // -------------------------------------------------
 // Consider the variables:
 var testString1 = "learn"
